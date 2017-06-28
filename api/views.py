@@ -1,19 +1,56 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.core import serializers
+from api.serializers import BusinessSerializer, SomeSerializer, ImageSerializer
+from api.models import Business, SomeModel, Image
 
-from api.serializers import BusinessSerializer
-from api.models import Business
+
 # Create your views here.
 
-
+#/businesses/
 class Businesses(APIView):
 
     def get(self , request):
         businesses = Business.objects.all()
-        serializer = BusinessSerializer(businesses , many=True)
+        serializer = BusinessSerializer(businesses, many=True)
         return Response(serializer.data)
+
+    def post(self):
+        pass
+
+#/images/
+class Images(APIView):
+
+    def get(self , request):
+        images = Image.objects.all()
+        serializer = ImageSerializer(images, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class ImagesOfID(APIView):
+
+    def get(self , request , businessID):
+        business = get_object_or_404(Business, pk=businessID)
+        try:
+            images = business.image_set.all()
+            serializer = ImageSerializer(images, many=True)
+            return Response(serializer.data)
+        except (KeyError,Business.DoesNotExist):
+            info = {'success': False, 'info': 'noData'}
+            return Response(info)
+
+    def post(self,request):
+        pass
+
+class Information(APIView):
+
+    def get(self , request):
+        info = {'updateAvailable' : False , 'something' : 'somethingElse'}
+        return Response(info)
 
     def post(self):
         pass

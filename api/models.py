@@ -28,10 +28,18 @@ class Business(models.Model):
     def __str__(self):
         return self.name + ' - ' + self.location + ' - ' + self.category
 
-class BusinessImages(models.Model):
-
-    business = models.ForeignKey(Business, on_delete=models.CASCADE)
-    photo = models.FileField(upload_to='images/', default='images/noImage/noImage.jpg')
+class Image(models.Model):
+    business = models.ForeignKey(Business,on_delete=models.CASCADE)
+    position = models.PositiveIntegerField(default=0, unique=False)
+    image = models.FileField(upload_to='images/', default='images/none/noThumbnail.jpg')
 
     def __str__(self):
-        return os.path.basename(self.photo.name)
+        return self.image.url
+
+class SomeModel(models.Model):
+    position = models.PositiveIntegerField(default=0, unique=False)
+    name = models.CharField(max_length=128)
+    location = models.CharField(max_length=128)
+    image = models.FileField(upload_to='images/', default='images/none/noThumbnail.jpg')
+    def __str__(self):
+        return self.name + ' - ' + self.location
