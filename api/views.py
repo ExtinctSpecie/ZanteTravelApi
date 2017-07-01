@@ -19,7 +19,15 @@ class Businesses(APIView):
 
     def post(self):
         pass
+#/businesses/businessID
+class Businesses(APIView):
+    def get(self, request):
+        businesses = Business.objects.all()
+        serializer = BusinessSerializer(businesses, many=True)
+        return Response(serializer.data)
 
+    def post(self):
+        pass
 #/images/
 class Images(APIView):
 
@@ -30,7 +38,7 @@ class Images(APIView):
 
     def post(self):
         pass
-
+#/images/businessID
 class ImagesOfID(APIView):
 
     def get(self , request , businessID):
