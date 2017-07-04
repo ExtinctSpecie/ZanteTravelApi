@@ -5,6 +5,19 @@ from django.db import models
 
 # Create your models here.
 
+# GroupID AND Group !!
+# menuItems.put(0, R.id.aboutZante);
+# menuItems.put(1, R.id.attractions);
+# menuItems.put(2, R.id.accommodation);
+# menuItems.put(3, R.id.food);
+# menuItems.put(4, R.id.entertainment);
+# menuItems.put(5, R.id.shopping);
+# menuItems.put(6, R.id.activities);
+# menuItems.put(7, R.id.beaches);
+# menuItems.put(8, R.id.rentals);
+# menuItems.put(9, R.id.other);
+# menuItems.put(10, R.id.emergencyHelp);
+
 class Business(models.Model):
 
     position = models.PositiveIntegerField(default=0, unique=False)
@@ -18,6 +31,7 @@ class Business(models.Model):
     mapCoordinates = models.CharField(max_length=128)
     address = models.CharField(max_length=128)
     group = models.CharField(max_length=128)
+    groupID = models.PositiveIntegerField(default=-1)
     category = models.CharField(max_length=128)
     type = models.CharField(max_length=128)
     workingHours = models.CharField(max_length=128)
