@@ -20,9 +20,9 @@ class Businesses(APIView):
     def post(self):
         pass
 #/businesses/businessID
-class Businesses(APIView):
-    def get(self, request):
-        businesses = Business.objects.all()
+class GroupBusinesses(APIView):
+    def get(self, request , businessGroupID):
+        businesses = Business.objects.filter(groupID = businessGroupID)
         serializer = BusinessSerializer(businesses, many=True)
         return Response(serializer.data)
 
