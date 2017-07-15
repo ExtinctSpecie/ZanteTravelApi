@@ -40,6 +40,7 @@ class Business(models.Model):
     isPremium = models.BooleanField(default=False)
     creditCards = models.BooleanField(default=False)
     summerOnly = models.BooleanField(default=False)
+    isRecommended = models.BooleanField(default=False)
     thumbnail = models.FileField(upload_to='thumbnails/', default='thumbnails/none/noThumbnail.jpg')
     date = models.DateTimeField(default=datetime.datetime.now())
 
