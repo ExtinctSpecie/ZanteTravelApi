@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'd*f8o5_4%8u*v2a$vriw=jtb1pasr&kv-e*jlq-88prj8_i5x!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['zante-travel.herokuapp.com']
+ALLOWED_HOSTS = ['zante-travel.herokuapp.com','localhost']
 
 
 # Application definition

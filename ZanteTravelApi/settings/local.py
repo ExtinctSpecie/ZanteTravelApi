@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'd*f8o5_4%8u*v2a$vriw=jtb1pasr&kv-e*jlq-88prj8_i5x!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['zante-travel.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['zante-travel.herokuapp.com']
 
 
 # Application definition
@@ -84,6 +84,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
