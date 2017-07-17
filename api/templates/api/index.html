@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Zante Travel API </title>
+<style>
+body {
+    background : #005050;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #33bbff;
+}
+tr:nth-child(odd) {
+    background-color: #33fff6;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Endpoint</th>
+    <th>Params</th>
+    <th>Returns</th>
+  </tr>
+  <tr>
+    <td>api/businesses/</td>
+    <td>No Params</td>
+    <td>All businesses in database</td>
+  </tr>
+  <tr>
+    <td>api/businesses/{businessGroupID}/</td>
+    <td>businessGroupID = [ 1 , 8 ] (Integer) </td>
+    <td>All businesses that belong to that group id</td>
+  </tr>
+  <tr>
+    <td>api/images/</td>
+    <td>No Params</td>
+    <td>All images</td>
+  </tr>
+  <tr>
+    <td>api/images/{businessID}/</td>
+    <td>businessID = Table primary key of business object (Positive Integer [0-9]+) </td>
+    <td>All images that belong to a certain business ID</td>
+  </tr>
+  <tr>
+    <td>api/information/</td>
+    <td>No Params</td>
+    <td>Some information about the application</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^$',views.APIDoc.as_view(),name='apidoc'),
     url(r'^businesses/$',views.Businesses.as_view(), name='businesses'),
     url(r'^businesses/(?P<businessGroupID>[0-9]+)/$',views.GroupBusinesses.as_view(), name='business'),
     url(r'^images/$',views.Images.as_view(), name='images'),
