@@ -5,4 +5,3 @@ from .models import Business, SomeModel, Image
 
 admin.site.register(Business)
 admin.site.register(Image)
-admin.site.register(SomeModel)
