@@ -41,6 +41,7 @@ class Business(models.Model):
     creditCards = models.BooleanField(default=False)
     summerOnly = models.BooleanField(default=False)
     isRecommended = models.BooleanField(default=False)
+    thumbnailURL = models.TextField(max_length=1024)
     thumbnail = models.FileField(upload_to='thumbnails/', default='thumbnails/none/noThumbnail.jpg')
     date = models.DateTimeField(default=datetime.datetime.now())
 
@@ -50,6 +51,7 @@ class Business(models.Model):
 class Image(models.Model):
     business = models.ForeignKey(Business,on_delete=models.CASCADE)
     position = models.PositiveIntegerField(default=0, unique=False)
+    imageURL = models.TextField(max_length=1024)
     image = models.FileField(upload_to='images/', default='images/none/noThumbnail.jpg')
 
     def __str__(self):
