@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe68357d-23d7-4a51-bac3-3b4903d11564" name="Default" comment="ach">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/images/navagio_beach.jpg" afterPath="$PROJECT_DIR$/media/images/navagio_beach.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/images/navagio_beach_9RDhIWE.jpg" afterPath="$PROJECT_DIR$/media/images/navagio_beach_9RDhIWE.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/images/navagio_beach_mn7YE5p.jpg" afterPath="$PROJECT_DIR$/media/images/navagio_beach_mn7YE5p.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/thumbnails/Anydore_Font_Illustration_Image_6.png" afterPath="$PROJECT_DIR$/media/thumbnails/Anydore_Font_Illustration_Image_6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/thumbnails/navagio_beach.jpg" afterPath="$PROJECT_DIR$/media/thumbnails/navagio_beach.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fe68357d-23d7-4a51-bac3-3b4903d11564" name="Default" comment="ach" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/ZanteTravelApi/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#648#680#0" expanded="true" />
               </folding>
@@ -821,7 +814,7 @@
     <entry file="file://$PROJECT_DIR$/ZanteTravelApi/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#648#680#0" expanded="true" />
           </folding>
