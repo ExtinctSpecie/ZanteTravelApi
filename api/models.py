@@ -55,7 +55,7 @@ class Image(models.Model):
     image = models.FileField(upload_to='images/', default='images/none/noThumbnail.jpg')
 
     def __str__(self):
-        return self.image.url
+        return self.business.name + ' - ' + str(self.position) + ' - ' + self.imageURL
 
 class SomeModel(models.Model):
     position = models.PositiveIntegerField(default=0, unique=False)
