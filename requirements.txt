@@ -5,7 +5,7 @@ click==6.7
 colorama==0.3.9
 decorators==0.1.1
 dj-database-url==0.4.2
-django==1.11.2
+django==2.2.24
 djangorestframework==3.6.3
 Flask==0.12.2
 gunicorn==19.7.1
